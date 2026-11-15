@@ -13,8 +13,10 @@
     ],
     "source_status": "documentation_recovered",
     "source_files": 0,
-    "updated_software": false,
-    "year_basis": "GIP listing year;2015-16 Amdocs contest winners announced2016. No completion date inferred."
+    "updated_software": true,
+    "year_basis": "GIP listing year;2015-16 Amdocs contest winners announced2016. No completion date inferred.",
+    "updated_software_path": "updated/browser",
+    "updated_software_relation": "New 2026 maintainer implementation; not recovered historical student source."
   },
   "recovered_on": "2026-11-15",
   "date_timezone": "Asia/Jerusalem",
@@ -182,11 +184,11 @@
     "raw_mail_published": false,
     "private_local_paths_published": false,
     "historical_image_byte_exact": true,
-    "software_license_added": false,
     "report_byte_exact": true,
-    "documents_recovered": 1
+    "documents_recovered": 1,
+    "historical_software_license_added": false,
+    "new_browser_source_license": "MIT, scoped to new application source and associated tooling/documentation; third-party and media terms separate."
   },
-  "validation_scope": "Documentation, full report privacy/active-content review and resource inspection only; no software build, inference run, model training or accuracy benchmark.",
   "report_review_status": "Independent complete 10-page visual/text/metadata/object review passed; no redaction identified.",
   "name_variants": [
     {
@@ -210,8 +212,25 @@
   "static_checks": {
     "local_markdown_paths": "passed",
     "json": "passed",
-    "two_status_badge_svg_files": "passed",
     "historical_report_and_image_sha256": "passed",
-    "github_gfm_readme_render": "passed"
+    "github_gfm_readme_render": "passed",
+    "status_and_new_badge_svg_files": "passed"
+  },
+  "historical_validation_scope": "Documentation, full report privacy/active-content review and resource inspection only; no software build, inference run, model training or accuracy benchmark.",
+  "updated_software_validation": {
+    "record": "updated/browser/docs/VALIDATION.md",
+    "historical_results_reproduced": false,
+    "model_trained": false,
+    "accuracy_benchmark": false
+  },
+  "updated_browser_reviews": {
+    "reviewer": "Claude",
+    "model": "claude-opus-5-5",
+    "date": "2026-11-15",
+    "rounds_completed": 2,
+    "scope": "Tools-disabled source/documentation review of new browser implementation. Code was not executed by Claude.",
+    "useful_findings": "Mirror label handling, fatal-worker recovery, worker CSP scope, provenance boundaries and validation qualifications checked against code and applied.",
+    "runtime_coverage_added": false,
+    "followup": "Focused second source/documentation review confirmed applied mirror/fatal-client fixes and original hash checker; remaining evidence qualifications checked against recorded results."
   }
 }

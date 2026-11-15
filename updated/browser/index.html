@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ece9e2">
+  <meta name="description" content="Create a photographic 2D puppet, adjust its joints, and animate it with a video. Updated browser implementation of the Puppify project.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self' blob: data:; media-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <title>Puppify · Photographic puppets</title>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#workspace" aria-label="Puppify workspace"><svg width="31" height="35" viewBox="0 0 31 35" fill="none" aria-hidden="true"><path d="M15.5 8v12m0-8L5 18m10.5-6L26 18M15.5 20 8 30m7.5-10L23 30" stroke="currentColor" stroke-width="2"/><circle cx="15.5" cy="5" r="4" fill="currentColor"/><circle cx="5" cy="18" r="2.5" fill="currentColor"/><circle cx="26" cy="18" r="2.5" fill="currentColor"/><circle cx="8" cy="30" r="2.5" fill="currentColor"/><circle cx="23" cy="30" r="2.5" fill="currentColor"/></svg><span>Puppify</span><span class="edition">Browser edition</span></a>
+    <nav aria-label="Project"><a href="#method">How it works</a><a href="https://github.com/twerdster/planar-marionettes">Project & source <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">PLANAR MARIONETTES</p><h1>Photographic puppets.</h1><p class="intro-copy">Turn a full-body photo into a jointed cutout.<br class="desktop-break"> Move it by hand, or use the motion from a video.</p></div>
+      <div class="local-note"><span class="status-dot"></span><div><strong>Runs in your browser</strong><span>Your photos and video stay on this device.</span></div></div>
+    </section>
+    <section class="workspace" id="workspace" aria-label="Puppet editor">
+      <aside class="source-panel panel">
+        <div class="panel-heading"><span class="step">01</span><h2>The photograph</h2></div>
+        <p class="panel-copy">One person, facing forward, with arms and legs visible.</p>
+        <label class="upload-button" for="photo-file"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 16V4m-4 4 4-4 4 4M4 15v5h16v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Choose a photo</label>
+        <input id="photo-file" type="file" accept="image/*" class="file-input">
+        <button id="sample-photo" class="text-button">Use example photo <span aria-hidden="true">→</span></button>
+        <div class="photo-preview" id="photo-drop"><canvas id="photo-canvas" width="480" height="600" aria-label="Source photograph and adjustable joint positions"></canvas><p id="photo-empty">Drop a photo here<br><span>JPG, PNG or WebP · up to 25 MB</span></p><span class="image-label" id="photo-label" hidden>REFERENCE IMAGE</span></div>
+        <div class="photo-caption"><span id="source-info">No photo selected</span><button id="adjust-joints" class="text-button" disabled aria-pressed="false">Adjust joints</button></div>
+        <p class="help-text" id="joint-help">Joints are detected automatically. You can correct them before building.</p>
+        <button id="build-puppet" class="primary-button" disabled><span>Build puppet</span><span aria-hidden="true">↗</span></button>
+        <div class="status-box" id="status-box" role="status" aria-live="polite"><span class="status-icon" id="status-icon">·</span><p id="status-text">Choose a photo to begin.</p></div>
+        <details class="source-options"><summary>Cutout settings</summary><label for="mask-threshold">Person-mask threshold <output id="threshold-value">0.50</output></label><input id="mask-threshold" type="range" min="0.2" max="0.8" step="0.05" value="0.5"><p>Rebuild after changing. A higher value trims soft edges.</p></details>
+      </aside>
+      <div class="result-column">
+        <section class="stage-panel panel" aria-labelledby="stage-heading">
+          <div class="stage-toolbar"><div class="panel-heading"><span class="step">02</span><h2 id="stage-heading">The marionette</h2></div><span class="stage-mode" id="stage-mode">WAITING FOR PHOTO</span></div>
+          <div class="stage-wrap" id="stage-wrap"><canvas id="puppet-canvas" aria-label="Interactive photographic puppet; drag a joint to move it"></canvas><div id="stage-empty" class="stage-empty"><svg width="124" height="176" viewBox="0 0 124 176" fill="none" aria-hidden="true"><circle cx="62" cy="22" r="15"/><path d="M62 39v64M62 51 28 73 10 61M62 51 96 73l18-12M62 103 40 133l-7 32m29-62 22 30 7 32"/><circle cx="62" cy="51" r="4"/><circle cx="28" cy="73" r="4"/><circle cx="96" cy="73" r="4"/><circle cx="62" cy="103" r="4"/><circle cx="40" cy="133" r="4"/><circle cx="84" cy="133" r="4"/></svg><p>Your puppet will appear here.</p><span>Start with a photo on the left.</span></div><span class="stage-coordinate">2D / CUTOUT RIG</span><span class="stage-caption" id="stage-caption" hidden>Drag a joint to change the pose</span></div>
+          <div class="stage-controls"><div><button id="reset-pose" class="secondary-button" disabled><span aria-hidden="true">↺</span> Reset pose</button><label class="toggle"><input type="checkbox" id="show-joints" checked><span>Show joints</span></label></div><button id="download-png" class="secondary-button" disabled>Save image <span aria-hidden="true">↓</span></button></div>
+        </section>
+        <section class="motion-panel panel" aria-labelledby="motion-heading"><div class="motion-copy"><div class="panel-heading"><span class="step">03</span><h2 id="motion-heading">Add motion</h2><span class="optional">OPTIONAL</span></div><p>Use a video to drive the same photographic cutout.</p><div class="motion-actions"><label class="secondary-button" for="video-file">Choose video</label><input id="video-file" type="file" accept="video/*" class="file-input"><button id="sample-video" class="text-button">Try example motion <span aria-hidden="true">→</span></button></div><p id="motion-status" class="help-text" role="status">Build a puppet, then choose a motion clip.</p><div class="motion-extra" id="motion-extra" hidden><button id="use-video-frame" class="text-button">Use this frame as the photo</button><label class="toggle"><input id="mirror-motion" type="checkbox"><span>Mirror motion</span></label></div></div><div class="video-slot"><video id="motion-video" controls playsinline muted preload="metadata" aria-label="Motion input video"></video><div id="video-empty"><svg width="29" height="29" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.4"/><path d="m10 8 6 4-6 4V8Z" fill="currentColor"/></svg><span>No motion clip</span></div><span class="video-label" id="video-label" hidden>INPUT VIDEO</span></div></section>
+      </div>
+    </section>
+    <section class="method" id="method"><div><p class="eyebrow">ABOUT THIS IMPLEMENTATION</p><h2>A photograph, separated<br>into moving parts.</h2></div><div class="method-description"><p>A pose model locates the joints and a person mask separates the foreground. The cutout is divided into a head, torso and limb segments, then attached to a 2D rig. Video changes the rig’s pose while keeping the reference photograph’s proportions.</p><p>Start with a clear, full-body view. Crossed limbs, hidden body parts, loose clothing and turns away from the camera can produce incomplete or incorrectly assigned cutouts. Joint correction helps alignment; it cannot reveal hidden surfaces.</p><p class="attribution">A new browser implementation by Aaron Wetzler, based on <em>Puppify — Automatic Generation of Planar Marionettes from Frontal Images</em>, by Elad Richardson and Gil Ben-Shachar, supervised by Anastasia Dubrovina and Aaron Wetzler. <a href="https://github.com/twerdster/planar-marionettes/blob/main/docs/report.pdf">Read the original report ↗</a></p></div></section>
+    <footer><span>Puppify <span class="footer-divider">/</span> Updated browser implementation</span><span id="example-credit">Example media attribution is included with the sample files.</span></footer>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

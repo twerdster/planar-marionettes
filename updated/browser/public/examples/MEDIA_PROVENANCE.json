@@ -1,0 +1,105 @@
+{
+  "title": "Jumping jacks and burpees",
+  "creator": "Taco Fleur (Cavemantraining)",
+  "creator_page": "https://commons.wikimedia.org/wiki/User:Taco_fleur",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Jumping_jacks_and_burpees.webm",
+  "source_page_revision": "https://commons.wikimedia.org/w/index.php?title=File:Jumping_jacks_and_burpees.webm&oldid=1182499913",
+  "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Jumping_jacks_and_burpees.webm",
+  "source_date": "2017-11-15",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "license_legalcode_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt",
+  "attribution_required": true,
+  "share_alike_applies_to": "These supplied demo media and their adaptations; not a blanket license for separate application source.",
+  "retrieved": "2026-11-15",
+  "source_bytes": 6544177,
+  "source_sha256": "1c8370a29c52b5b1538f03f8c63be6cdc9333dea3cbd77cc8f2af0dbe496d5b4",
+  "source_sha1": "de0408ee2f90afba376f23d86f48d6c98d4eb42b",
+  "source_dimensions": [
+    640,
+    480
+  ],
+  "source_duration_seconds": 45.293,
+  "derived_files": [
+    {
+      "file": "jumping-jacks-photo.png",
+      "bytes": 232371,
+      "sha256": "b3b760ddb4dd3a30565187b732381340fcd250a386e8b7bfcc12b82ffe1d1af3",
+      "changes": "Decoded source frame 38, full 640 \u00d7 480 image including original black borders; no crop or retouch.",
+      "reproduction_command": "ffmpeg -hide_banner -loglevel error -i jumping-jacks-burpees-original.webm -vf 'select=eq(n\\,38)' -fps_mode vfr -frames:v 1 jumping-jacks-photo.png",
+      "source_frame_index_zero_based": 38,
+      "source_frame_timestamp_seconds": 1.271,
+      "dimensions": [
+        640,
+        480
+      ],
+      "reproduction_command_argv": [
+        "ffmpeg",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "jumping-jacks-burpees-original.webm",
+        "-vf",
+        "select=eq(n\\,38)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "jumping-jacks-photo.png"
+      ]
+    },
+    {
+      "file": "jumping-jacks-motion.mp4",
+      "bytes": 190235,
+      "sha256": "3c340a2d275a026c89ddbb02ea0701fac29893bfecd242411ce2a2e8641d4611",
+      "changes": "First 81 source video frames, containing frontal jumping jacks and ending upright before the burpee; re-encoded as H.264 baseline/yuv420p with audio removed. No resizing, cropping or retouching.",
+      "source_frame_range_zero_based_inclusive": [
+        0,
+        80
+      ],
+      "first_source_timestamp_seconds": 0.003,
+      "last_source_timestamp_seconds": 2.672,
+      "duration_seconds": 2.702703,
+      "frame_count": 81,
+      "frame_rate": "2997/100",
+      "dimensions": [
+        640,
+        480
+      ],
+      "audio_streams": 0,
+      "reproduction_command_argv": [
+        "ffmpeg",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "jumping-jacks-burpees-original.webm",
+        "-map",
+        "0:v:0",
+        "-frames:v",
+        "81",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-profile:v",
+        "baseline",
+        "-level:v",
+        "3.0",
+        "-preset",
+        "medium",
+        "-crf",
+        "20",
+        "-pix_fmt",
+        "yuv420p",
+        "-movflags",
+        "+faststart",
+        "-map_metadata",
+        "-1",
+        "jumping-jacks-motion.mp4"
+      ],
+      "reproduction_command": "ffmpeg -hide_banner -loglevel error -i jumping-jacks-burpees-original.webm -map 0:v:0 -frames:v 81 -an -c:v libx264 -profile:v baseline -level:v 3.0 -preset medium -crf 20 -pix_fmt yuv420p -movflags +faststart -map_metadata -1 jumping-jacks-motion.mp4"
+    }
+  ],
+  "scope_note": "Real recorded human motion. Photo and motion clip show the same subject/scene. No independent landmark or segmentation ground truth; this is a demonstration fixture, not a benchmark."
+}

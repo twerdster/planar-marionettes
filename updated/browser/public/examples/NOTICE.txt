@@ -1,0 +1,9 @@
+Sample photo and motion clip
+
+Derived from "Jumping jacks and burpees" by Taco Fleur (Cavemantraining), 15 November 2017.
+Source: https://commons.wikimedia.org/wiki/File:Jumping_jacks_and_burpees.webm
+Creator: https://commons.wikimedia.org/wiki/User:Taco_fleur
+License: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Changes: the photo is one decoded full frame; the 2.7-second clip is trimmed and re-encoded without audio. No cropping or retouching. Detailed timestamps and hashes are in MEDIA_PROVENANCE.json. These demo media and their adaptations remain under CC BY-SA 4.0. Application source has separate terms. No endorsement is implied.

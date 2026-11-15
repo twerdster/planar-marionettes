@@ -1,5 +1,7 @@
 # Puppify - Planar Marionettes
 
+[![New!](assets/new-badge.svg) **Updated and ported for modern hardware**](updated/README.md)
+
 <p align="center">
   <img src="assets/project-preview.png" alt="Historical Puppify diagram: two frontal photographs, estimated body joints, generated foreground and background scribbles, body-part segmentation, and repositioned two-dimensional cutouts" width="700">
 </p>
@@ -26,7 +28,7 @@ The recovered [10-page report](docs/report.pdf) describes a Caffe joint-localiza
 
 The current report and presentation URLs returned HTTP 403 during recovery on November 15, 2026. The report was recovered from the archive. The archived presentation URL contained an unrelated one-slide lab notice, which was excluded; the actual final presentation remains unrecovered.
 
-No original application source, trained model, executable or installation package has been recovered for this repository. This is an archival project record; it contains no updated software implementation. No build, inference run or accuracy benchmark was performed.
+No original application source, trained model, executable or installation package has been recovered for this repository. The historical application has not been built, run or benchmarked during recovery. The separate new browser implementation and its checks are described in the [updated section](updated/README.md).
 
 ## Award
 
@@ -38,4 +40,4 @@ Credits follow the GIP project records and Technion news. Both Technion news rec
 
 Maintained by Aaron Wetzler, one of the original supervisors. The historical project work is credited to Elad Richardson and Gil Ben-Shachar.
 
-No explicit open license was found on the GIP pages, Technion news records or in the report. The historical report and figure retain their existing rights; inclusion here adds no reuse permission. No software, data or image license is added. Original authors or rights holders can open an issue to contribute missing material, correct attribution, or request removal. The [provenance record](PROVENANCE.json) lists source URLs, recovery checks and the image and report SHA-256 hashes.
+No explicit open license was found on the GIP pages, Technion news records or in the report. The historical report and figure retain their existing rights; inclusion here adds no reuse permission. No new license is assigned to those historical materials. The separate browser implementation has its own scoped terms. Original authors or rights holders can open an issue to contribute missing material, correct attribution, or request removal. The [provenance record](PROVENANCE.json) lists source URLs, recovery checks and the image and report SHA-256 hashes.

@@ -1,0 +1,240 @@
+{
+  "title": "Puppify browser editor: real-photo cutout driven by real jumping-jacks video",
+  "recorded_utc": "2026-11-15T18:33:13.972Z",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "license_scope": "The three demonstration media files in this directory include adaptations of the credited source video and are supplied under CC BY-SA 4.0. This does not change the separate application source, runtime/model, or historical archive licenses.",
+  "source_media": {
+    "title": "Jumping jacks and burpees",
+    "creator": "Taco Fleur (Cavemantraining)",
+    "creator_page": "https://commons.wikimedia.org/wiki/User:Taco_fleur",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jumping_jacks_and_burpees.webm",
+    "source_page_revision": "https://commons.wikimedia.org/w/index.php?title=File:Jumping_jacks_and_burpees.webm&oldid=1182499913",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Jumping_jacks_and_burpees.webm",
+    "source_date": "2017-11-15",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "license_legalcode_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt",
+    "retrieved": "2026-11-15",
+    "source_bytes": 6544177,
+    "source_sha256": "1c8370a29c52b5b1538f03f8c63be6cdc9333dea3cbd77cc8f2af0dbe496d5b4",
+    "source_sha1": "de0408ee2f90afba376f23d86f48d6c98d4eb42b"
+  },
+  "app_inputs": [
+    {
+      "file": "jumping-jacks-photo.png",
+      "bytes": 232371,
+      "sha256": "b3b760ddb4dd3a30565187b732381340fcd250a386e8b7bfcc12b82ffe1d1af3",
+      "changes": "Decoded source frame 38, full 640 \u00d7 480 image including original black borders; no crop or retouch.",
+      "reproduction_command": "ffmpeg -hide_banner -loglevel error -i jumping-jacks-burpees-original.webm -vf 'select=eq(n\\,38)' -fps_mode vfr -frames:v 1 jumping-jacks-photo.png",
+      "source_frame_index_zero_based": 38,
+      "source_frame_timestamp_seconds": 1.271,
+      "dimensions": [
+        640,
+        480
+      ],
+      "reproduction_command_argv": [
+        "ffmpeg",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "jumping-jacks-burpees-original.webm",
+        "-vf",
+        "select=eq(n\\,38)",
+        "-fps_mode",
+        "vfr",
+        "-frames:v",
+        "1",
+        "jumping-jacks-photo.png"
+      ]
+    },
+    {
+      "file": "jumping-jacks-motion.mp4",
+      "bytes": 190235,
+      "sha256": "3c340a2d275a026c89ddbb02ea0701fac29893bfecd242411ce2a2e8641d4611",
+      "changes": "First 81 source video frames, containing frontal jumping jacks and ending upright before the burpee; re-encoded as H.264 baseline/yuv420p with audio removed. No resizing, cropping or retouching.",
+      "source_frame_range_zero_based_inclusive": [
+        0,
+        80
+      ],
+      "first_source_timestamp_seconds": 0.003,
+      "last_source_timestamp_seconds": 2.672,
+      "duration_seconds": 2.702703,
+      "frame_count": 81,
+      "frame_rate": "2997/100",
+      "dimensions": [
+        640,
+        480
+      ],
+      "audio_streams": 0,
+      "reproduction_command_argv": [
+        "ffmpeg",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-i",
+        "jumping-jacks-burpees-original.webm",
+        "-map",
+        "0:v:0",
+        "-frames:v",
+        "81",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-profile:v",
+        "baseline",
+        "-level:v",
+        "3.0",
+        "-preset",
+        "medium",
+        "-crf",
+        "20",
+        "-pix_fmt",
+        "yuv420p",
+        "-movflags",
+        "+faststart",
+        "-map_metadata",
+        "-1",
+        "jumping-jacks-motion.mp4"
+      ],
+      "reproduction_command": "ffmpeg -hide_banner -loglevel error -i jumping-jacks-burpees-original.webm -map 0:v:0 -frames:v 81 -an -c:v libx264 -profile:v baseline -level:v 3.0 -preset medium -crf 20 -pix_fmt yuv420p -movflags +faststart -map_metadata -1 jumping-jacks-motion.mp4"
+    }
+  ],
+  "recording": {
+    "application": "Puppify 2026 browser implementation",
+    "method": "Playwright recording of the actual production-built application in a new anonymous Chrome context. The actual bundled MediaPipe model inferred the reference photo and successive frames of the real video. A passive worker observer recorded results; no vision outputs or interface were synthesized.",
+    "browser": "157.0.8103.51",
+    "platform": "macOS 15.1.1 arm64",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "device_pixel_ratio": 1,
+    "headless": true,
+    "graphics": "Chrome launched with ANGLE SwiftShader flags; successful pose inference reported CPU delegate.",
+    "production_bundles": {
+      "dist/assets/index-D8IAXL9Z.js": {
+        "bytes": 30015,
+        "sha256": "37842f6a38ed8a43f517121647c846aa764506788cf041a10e2de7353994b6f5"
+      },
+      "dist/assets/vision.worker-BlJUeOL8.js": {
+        "bytes": 3642,
+        "sha256": "a89e0a60c82b652cbf87941d796ab72d3f7dc0bb6b633afe43494e4f49d4e92d"
+      },
+      "dist/assets/vision_bundle-D0PlMZuX.js": {
+        "bytes": 154364,
+        "sha256": "b7c3b622cc5bd640f45dce8d304a88cdebb41e4b6cf27e2d9073af2718cf103b"
+      }
+    },
+    "network": "All page runtime requests were restricted to a loopback production preview serving vendored assets; zero external requests were attempted.",
+    "changes": [
+      "Selected an 8-second uninterrupted playback segment from the actual screen recording (7.08\u201315.08 seconds of a 16.08-second raw capture).",
+      "Cropped the recorded viewport to the visible editor workspace: x=51, y=0, width=1176, height=836; no UI was rearranged.",
+      "MP4: H.264, 25 fps, yuv420p, CRF 21, silent, faststart.",
+      "GIF: the same MP4 segment downscaled to 960\u00d7682, 8 fps, 80-color palette with Bayer dithering; repeats.",
+      "editor.png: an actual locator screenshot of the editor workspace after pausing real playback, rather than a generated interface."
+    ],
+    "raw_capture_sha256": "6b67a0be6d407f3d92a7737e8506f94835749e74723926ea659a3b31af3225c0",
+    "raw_capture_duration_seconds": 16.08,
+    "workspace_crop": {
+      "x": 51,
+      "y": 0,
+      "width": 1176,
+      "height": 836
+    },
+    "mp4_command_argv": [
+      "ffmpeg",
+      "-ss",
+      "7.08",
+      "-i",
+      "capture.webm",
+      "-t",
+      "8",
+      "-vf",
+      "crop=1176:836:51:0,fps=25",
+      "-c:v",
+      "libx264",
+      "-preset",
+      "slow",
+      "-crf",
+      "21",
+      "-pix_fmt",
+      "yuv420p",
+      "-an",
+      "-movflags",
+      "+faststart",
+      "puppify-browser-demo.mp4"
+    ],
+    "gif_command_argv": [
+      "ffmpeg",
+      "-i",
+      "puppify-browser-demo.mp4",
+      "-vf",
+      "fps=8,scale=960:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=80:stats_mode=diff[p];[s1][p]paletteuse=dither=bayer:bayer_scale=4",
+      "-loop",
+      "0",
+      "puppify-browser-demo.gif"
+    ]
+  },
+  "observations": {
+    "sampled_playback_states": 40,
+    "sampled_video_frame_counter_start": 3,
+    "sampled_video_frame_counter_end": 197,
+    "distinct_sampled_puppet_poses": 40,
+    "sampled_source_video_time_seconds_min": 0.0176,
+    "sampled_source_video_time_seconds_max": 2.6561,
+    "successful_worker_detection_results": 208,
+    "successful_detection_landmark_counts": [
+      33
+    ],
+    "successful_detection_delegates": [
+      "CPU"
+    ],
+    "no_person_results": 1,
+    "no_person_note": "One initial video result at source time 0 had no person; subsequent genuine inference drove the displayed motion.",
+    "external_request_attempts": 0,
+    "uncaught_page_errors": 0,
+    "scope": "One adult actor, one indoor scene, with a reference photograph extracted from the same video. The source clip loops; model pose/mask errors and rigid-cutout artifacts remain visible. This is a functional demonstration without landmark/segmentation ground truth, not an accuracy, throughput, physical-device, Safari, or GPU benchmark."
+  },
+  "files": [
+    {
+      "file": "puppify-browser-demo.mp4",
+      "bytes": 464958,
+      "sha256": "45c2e98fa1d97769dacdf6e20997ac20cc768c52726be95462d6975984344e64",
+      "dimensions": [
+        1176,
+        836
+      ],
+      "duration_seconds": 8.0,
+      "frame_rate": "25/1",
+      "frame_count": 200,
+      "codec": "h264",
+      "audio_streams": 0
+    },
+    {
+      "file": "puppify-browser-demo.gif",
+      "bytes": 1598620,
+      "sha256": "3848adbbae7aea3dc8d3c30593410ce1d2c0c4d3e7ed31607136bee13ca11ec7",
+      "dimensions": [
+        960,
+        682
+      ],
+      "frame_count": 64,
+      "duration_seconds": 8.01,
+      "frame_rate": 8,
+      "palette_colors_max": 80,
+      "loop": "forever"
+    },
+    {
+      "file": "editor.png",
+      "bytes": 208436,
+      "sha256": "eb57d4e3eee3ad036452105bb93b87a200684cbe16cd6b4ad8e7fc5af4901b31",
+      "dimensions": [
+        1174,
+        836
+      ]
+    }
+  ],
+  "visual_review": "First, middle, and final MP4 frames and the GIF first frame were inspected against the actual editor screenshot. The photograph, source-video inset, and cutout stage remain visible, and arm/leg poses change during recorded playback."
+}

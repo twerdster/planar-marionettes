@@ -1,0 +1,32 @@
+{
+  "package": "@mediapipe/tasks-vision",
+  "version": "1.2.3",
+  "retrieved": "2026-11-15",
+  "model": "pose_landmarker_full/float16/1",
+  "model_url": "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/1/pose_landmarker_full.task",
+  "npm_tarball": "https://registry.npmjs.org/@mediapipe/tasks-vision/-/tasks-vision-1.2.3.tgz",
+  "npm_integrity": "sha512-sxJyfhbN+EamexhaaCmUlw7v8vWWMum7VDsORe6d4c8Dk/xlI4qiIgoSw9cE9hpvYhVRRVLIA8y605FbqWkNeQ==",
+  "license_source": "https://raw.githubusercontent.com/google-ai-edge/mediapipe/02ca022d573c004c463d8c61eb3f8ce17e95a7fc/LICENSE",
+  "files": [
+    {
+      "path": "LICENSE.mediapipe.txt",
+      "bytes": 12331,
+      "sha256": "8707eef0533987efc5b155d64761eeb6e20793f50b9bd1a68dad1cf4719d0ed8"
+    },
+    {
+      "path": "pose_landmarker_full.task",
+      "bytes": 9398198,
+      "sha256": "5134a3aad27a58b93da0088d431f366da362b44e3ccfbe3462b3827a839011b1"
+    },
+    {
+      "path": "wasm/vision_wasm_module_internal.js",
+      "bytes": 336662,
+      "sha256": "d29996249490361715c769c6a49b43ad47e6ac9a28a8e8bce8d02b238e897851"
+    },
+    {
+      "path": "wasm/vision_wasm_module_internal.wasm",
+      "bytes": 14665738,
+      "sha256": "a269e84b12aefc93c9d6a4d62b01f41e5434a9fa941533bb8e75b1e3d1669e46"
+    }
+  ]
+}

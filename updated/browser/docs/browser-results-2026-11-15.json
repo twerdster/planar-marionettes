@@ -1,0 +1,220 @@
+{
+  "stats": {
+    "startTime": "2026-11-15T18:31:13.112Z",
+    "duration": 50820.71000000001,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "method": "Eight distinct user-flow checks, each executed in installed Google Chrome at desktop and mobile-emulated viewports. Native CDP touch input is used for mobile pointer drags. Passive observation of real Worker responses; no fake landmark/mask results. Cancellation delays a real local model fetch; the recovery check returns one intentional HTTP503 then allows genuine model bytes.",
+  "scope": "One real licensed subject/scene. Procedural blank image/video are explicitly negative controls. No accuracy benchmark, physical-phone, Safari or GPU execution claim. Reset stability is checked after pausing; no deterministic in-flight reset-response scheduling is claimed.",
+  "platform": "macOS-15.1.1-arm64-arm-64bit-Mach-O",
+  "node": "v23.11.0",
+  "npm": "10.9.2",
+  "browser_versions": [
+    "157.0.8103.51"
+  ],
+  "viewport_configs": [
+    {
+      "project": "desktop-chrome",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      }
+    },
+    {
+      "project": "mobile-chrome-emulation",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  ],
+  "contexts": 16,
+  "external_requests_total": 0,
+  "uncaught_errors_total": 0,
+  "all_frozen_sources_and_bundles_unchanged_after_tests": true,
+  "threshold_checks": [
+    {
+      "project": "desktop-chrome",
+      "thresholdBefore": 0.5,
+      "foregroundBefore": 10971,
+      "thresholdAfter": 0.6,
+      "foregroundAfter": 10644
+    },
+    {
+      "project": "mobile-chrome-emulation",
+      "thresholdBefore": 0.5,
+      "foregroundBefore": 10971,
+      "thresholdAfter": 0.6,
+      "foregroundAfter": 10644
+    }
+  ],
+  "bundle_files": [
+    "index-D8IAXL9Z.js",
+    "vision.worker-BlJUeOL8.js"
+  ],
+  "geometry_checks": {
+    "passed": 13,
+    "failed": 0,
+    "command": "npm test",
+    "scope": "Geometry and mask data operations; no pose-model accuracy benchmark."
+  },
+  "checks": [
+    {
+      "title": "real photo creates photographic cutouts; pointer or touch posing resets and exports a transparent PNG",
+      "project": "desktop-chrome",
+      "status": "passed",
+      "duration_ms": 6627,
+      "positive_video_inferences": 0,
+      "no_person_video_inferences": 0
+    },
+    {
+      "title": "real photo creates photographic cutouts; pointer or touch posing resets and exports a transparent PNG",
+      "project": "mobile-chrome-emulation",
+      "status": "passed",
+      "duration_ms": 6011,
+      "positive_video_inferences": 0,
+      "no_person_video_inferences": 0
+    },
+    {
+      "title": "reference-joint correction and mask setting are applied when rebuilding",
+      "project": "desktop-chrome",
+      "status": "passed",
+      "duration_ms": 2707,
+      "positive_video_inferences": 0,
+      "no_person_video_inferences": 0
+    },
+    {
+      "title": "reference-joint correction and mask setting are applied when rebuilding",
+      "project": "mobile-chrome-emulation",
+      "status": "passed",
+      "duration_ms": 1747,
+      "positive_video_inferences": 0,
+      "no_person_video_inferences": 0
+    },
+    {
+      "title": "real example video advances and actual inferred poses drive the cutout, then reset stops motion",
+      "project": "desktop-chrome",
+      "status": "passed",
+      "duration_ms": 5908,
+      "positive_video_inferences": 22,
+      "no_person_video_inferences": 1
+    },
+    {
+      "title": "real example video advances and actual inferred poses drive the cutout, then reset stops motion",
+      "project": "mobile-chrome-emulation",
+      "status": "passed",
+      "duration_ms": 3343,
+      "positive_video_inferences": 8,
+      "no_person_video_inferences": 1
+    },
+    {
+      "title": "bad image bytes and a genuine no-person inference fail clearly and the next real photo recovers",
+      "project": "desktop-chrome",
+      "status": "passed",
+      "duration_ms": 2586,
+      "positive_video_inferences": 0,
+      "no_person_video_inferences": 0
+    },
+    {
+      "title": "bad image bytes and a genuine no-person inference fail clearly and the next real photo recovers",
+      "project": "mobile-chrome-emulation",
+      "status": "passed",
+      "duration_ms": 1605,
+      "positive_video_inferences": 0,
+      "no_person_video_inferences": 0
+    },
+    {
+      "title": "replacing a photo during actual model loading cancels the old worker and cannot restore its stale puppet",
+      "project": "desktop-chrome",
+      "status": "passed",
+      "duration_ms": 2998,
+      "positive_video_inferences": 0,
+      "no_person_video_inferences": 0
+    },
+    {
+      "title": "replacing a photo during actual model loading cancels the old worker and cannot restore its stale puppet",
+      "project": "mobile-chrome-emulation",
+      "status": "passed",
+      "duration_ms": 1957,
+      "positive_video_inferences": 0,
+      "no_person_video_inferences": 0
+    },
+    {
+      "title": "one actual model HTTP failure is reported and a new attempt recovers without a page reload",
+      "project": "desktop-chrome",
+      "status": "passed",
+      "duration_ms": 2726,
+      "positive_video_inferences": 0,
+      "no_person_video_inferences": 0
+    },
+    {
+      "title": "one actual model HTTP failure is reported and a new attempt recovers without a page reload",
+      "project": "mobile-chrome-emulation",
+      "status": "passed",
+      "duration_ms": 1620,
+      "positive_video_inferences": 0,
+      "no_person_video_inferences": 0
+    },
+    {
+      "title": "no-person motion runs real negative inference and holds the previously built photographic pose",
+      "project": "desktop-chrome",
+      "status": "passed",
+      "duration_ms": 3321,
+      "positive_video_inferences": 0,
+      "no_person_video_inferences": 4
+    },
+    {
+      "title": "no-person motion runs real negative inference and holds the previously built photographic pose",
+      "project": "mobile-chrome-emulation",
+      "status": "passed",
+      "duration_ms": 1924,
+      "positive_video_inferences": 0,
+      "no_person_video_inferences": 2
+    },
+    {
+      "title": "editor fits the viewport before and after actual photo processing",
+      "project": "desktop-chrome",
+      "status": "passed",
+      "duration_ms": 1916,
+      "positive_video_inferences": 0,
+      "no_person_video_inferences": 0
+    },
+    {
+      "title": "editor fits the viewport before and after actual photo processing",
+      "project": "mobile-chrome-emulation",
+      "status": "passed",
+      "duration_ms": 1289,
+      "positive_video_inferences": 0,
+      "no_person_video_inferences": 0
+    }
+  ],
+  "exported_pngs": [
+    {
+      "viewport": "mobile",
+      "width": 1200,
+      "height": 1400,
+      "bytes": 447789,
+      "sha256": "b1724731c6c4086d42f80713d92b57b96e864d9b33f4fa16ca2b5cd97c1a4952"
+    },
+    {
+      "viewport": "desktop",
+      "width": 1200,
+      "height": 1400,
+      "bytes": 447789,
+      "sha256": "b1724731c6c4086d42f80713d92b57b96e864d9b33f4fa16ca2b5cd97c1a4952"
+    }
+  ],
+  "final_build_idle_observation": {
+    "time": "2026-11-15T18:38:31.536Z",
+    "idleAfterInferenceMs": 62004,
+    "browser": "157.0.8103.51",
+    "delegate": "CPU",
+    "app": "index-D8IAXL9Z.js",
+    "worker": "vision.worker-BlJUeOL8.js",
+    "external": [],
+    "errors": []
+  }
+}
