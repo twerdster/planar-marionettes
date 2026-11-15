@@ -1,0 +1,217 @@
+{
+  "project": {
+    "title": "Puppify - Automatic Generation of Planar Marionettes from Frontal Images",
+    "short_title": "Planar Marionettes (Puppify)",
+    "year": 2016,
+    "students": [
+      "Elad Richardson",
+      "Gil Ben-Shachar"
+    ],
+    "supervisors": [
+      "Anastasia Dubrovina",
+      "Aaron Wetzler"
+    ],
+    "source_status": "documentation_recovered",
+    "source_files": 0,
+    "updated_software": false,
+    "year_basis": "GIP listing year;2015-16 Amdocs contest winners announced2016. No completion date inferred."
+  },
+  "recovered_on": "2026-11-15",
+  "date_timezone": "Asia/Jerusalem",
+  "files": [
+    {
+      "path": "assets/project-preview.png",
+      "source_url": "https://gip.cs.technion.ac.il/img-projects/1473944784_104.6_pict_1.png",
+      "listing_url": "https://gip.cs.technion.ac.il/last-projects.php",
+      "bytes": 622867,
+      "sha256": "211f68885c94bf67c8488e77ee129561d97b6c21ac9aa570e4fc60613687e741",
+      "width": 886,
+      "height": 860,
+      "modified": false,
+      "caption": "Historical Puppify pipeline figure showing photographs, estimated body joints, generated scribbles, segmented body parts and repositioned two-dimensional cutouts.",
+      "visual_review": "Inspected complete image. Identifiable adults appear in the publicly posted lab illustration; no credentials or contact details observed. Identities not inferred.",
+      "license": "No explicit open license established; original attribution and terms retained."
+    },
+    {
+      "path": "docs/report.pdf",
+      "original_source_url": "https://gip.cs.technion.ac.il/projects/uploads/6_preport_7.pdf",
+      "archive_url": "https://web.archive.org/web/20230103114501id_/https://gip.cs.technion.ac.il/projects/uploads/6_preport_7.pdf",
+      "archive_capture": "2023-01-03T11:45:01Z",
+      "bytes": 8108357,
+      "sha256": "bcbac66e0e988cd3a82a8a9d8692d549451502757b773248327d3eb9d87bbb92",
+      "pages": 10,
+      "modified": false,
+      "pdf_metadata_creation_date": "2015-11-18T21:06:48Z",
+      "date_scope": "PDF creation metadata only; no project completion/publication date inferred. GIP listing and award are 2016.",
+      "review": {
+        "independent_full_page_visual_review": true,
+        "text_metadata_objects_reviewed": true,
+        "pdf_objects": 404,
+        "redaction_required": false,
+        "embedded_files": 0,
+        "javascript": false,
+        "forms": false,
+        "remote_actions": false,
+        "initial_view_action": "Internal GoTo/Fit",
+        "private_contacts_or_credentials_observed": false
+      },
+      "license": "No explicit open license established; original material preserved without a new blanket license.",
+      "pdf_metadata_creation_date_raw": "D:20151118210648Z"
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://gip.cs.technion.ac.il/lab-projects.php?id=6",
+      "status": 200,
+      "role": "Project title, students, supervisors, method, resource links; canonical attribution corrects surname typo using award sources."
+    },
+    {
+      "url": "https://gip.cs.technion.ac.il/last-projects.php",
+      "status": 200,
+      "role": "2016 placement and downloadable historical figure."
+    },
+    {
+      "url": "https://www.cs.technion.ac.il/news/view-new.php?nwid=841",
+      "status": 200,
+      "published": "2016-05-10",
+      "role": "2015-16 Amdocs contest winners; names and supervisors.",
+      "confirmed_project_credits": {
+        "students": [
+          "Gil Ben-Shachar",
+          "Elad Richardson"
+        ],
+        "supervisors": [
+          "Anastasia Dubrovina",
+          "Aaron Wetzler"
+        ]
+      }
+    },
+    {
+      "url": "https://www.cs.technion.ac.il/news/view-new.php?nwid=866",
+      "status": 200,
+      "published": "2016-07-04",
+      "role": "Award ceremony and attribution confirmation.",
+      "confirmed_project_credits": {
+        "students": [
+          "Gil Ben-Shachar",
+          "Elad Richardson"
+        ],
+        "supervisors": [
+          "Anastasia Dubrovina",
+          "Aaron Wetzler"
+        ]
+      }
+    }
+  ],
+  "external_materials": [
+    {
+      "kind": "demo video",
+      "url": "https://www.youtube.com/watch?v=RPFcZ8bozjM",
+      "source": "Official GIP project page",
+      "locally_hosted": false,
+      "video_content_reviewed": false,
+      "metadata_check": "YouTube oEmbed returned HTTP 200",
+      "metadata_title": "Pupify",
+      "metadata_author": "GIP Technion"
+    },
+    {
+      "kind": "project report",
+      "url": "https://gip.cs.technion.ac.il/projects/uploads/6_preport_7.pdf",
+      "recovered": true,
+      "content_reviewed": true,
+      "recovered_from_archive": true,
+      "archive_url": "https://web.archive.org/web/20230103114501id_/https://gip.cs.technion.ac.il/projects/uploads/6_preport_7.pdf",
+      "current_http_status": 403,
+      "checked_on": "2026-11-15"
+    },
+    {
+      "kind": "final presentation",
+      "url": "https://gip.cs.technion.ac.il/projects/uploads/6_presentation_8.pptx",
+      "recovered": false,
+      "archive_url": "https://web.archive.org/web/20180526033813id_/http://gip.cs.technion.ac.il:80/projects/uploads/6_presentation_8.pptx",
+      "archive_status": "unrelated single-slide lab notice; excluded",
+      "actual_project_presentation_recovered": false,
+      "locally_published": false,
+      "review_scope": "The archived file was inspected and identified as an unrelated one-slide notice; the actual project presentation was not reviewed.",
+      "current_http_status": 403,
+      "checked_on": "2026-11-15",
+      "archived_capture_content_reviewed": true
+    },
+    {
+      "kind": "detail-page image",
+      "url": "https://gip.cs.technion.ac.il/projects/uploads/6_pict_1.png",
+      "note": "The separately published image URL in the official listing supplied the preserved PNG.",
+      "current_http_status": 403,
+      "checked_on": "2026-11-15"
+    },
+    {
+      "kind": "legacy award report link",
+      "url": "https://www.cs.technion.ac.il/news/2016/841/docs/project.pdf",
+      "current_http_status": 404,
+      "checked_on": "2026-11-15"
+    },
+    {
+      "kind": "legacy award image gallery link",
+      "url": "https://www.cs.technion.ac.il/news/2016/841/photos/1/",
+      "current_http_status": 404,
+      "checked_on": "2026-11-15"
+    }
+  ],
+  "source_search": {
+    "scope": "Public GitHub Puppify repository-name search, public repository listings for eladrich and gilbs10, and author public website.",
+    "matching_original_source_repository_found": false,
+    "limits": "Bounded public-source search only; absence from these results does not prove the source does not exist elsewhere.",
+    "author_profile_checks": [
+      {
+        "url": "https://api.github.com/users/eladrich",
+        "profile_name": "Elad Richardson",
+        "profile_blog": "https://eladrich.github.io/"
+      },
+      {
+        "url": "https://api.github.com/users/gilbs10",
+        "profile_name": "Gil Ben-Shachar"
+      }
+    ],
+    "author_website_check": {
+      "url": "https://eladrich.github.io/",
+      "title": "Elad Richardson",
+      "puppify_or_marionette_reference_found": false
+    }
+  },
+  "privacy_and_preservation": {
+    "raw_mail_published": false,
+    "private_local_paths_published": false,
+    "historical_image_byte_exact": true,
+    "software_license_added": false,
+    "report_byte_exact": true,
+    "documents_recovered": 1
+  },
+  "validation_scope": "Documentation, full report privacy/active-content review and resource inspection only; no software build, inference run, model training or accuracy benchmark.",
+  "report_review_status": "Independent complete 10-page visual/text/metadata/object review passed; no redaction identified.",
+  "name_variants": [
+    {
+      "variant": "Aaron Weltzer",
+      "found_in": [
+        "GIP project detail page",
+        "docs/report.pdf"
+      ],
+      "canonical": "Aaron Wetzler",
+      "basis": "Technion news nwid841 and nwid866."
+    }
+  ],
+  "editorial_reviews": {
+    "reviewer": "Claude",
+    "rounds_completed": 2,
+    "date": "2026-11-15",
+    "type": "Tools-disabled editorial review of project documentation/provenance",
+    "useful_feedback_checked_and_applied": true,
+    "runtime_coverage_added": false
+  },
+  "static_checks": {
+    "local_markdown_paths": "passed",
+    "json": "passed",
+    "two_status_badge_svg_files": "passed",
+    "historical_report_and_image_sha256": "passed",
+    "github_gfm_readme_render": "passed"
+  }
+}
